@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@font-face {
+  font-family: 'Basement Grotesque';
+  src: url('/fonts/BasementGrotesque-Black_v1.202.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
