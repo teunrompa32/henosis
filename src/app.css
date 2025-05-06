@@ -1,0 +1,17 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+body {
+	overflow: hidden;
+}
+
+@font-face {
+	font-family: 'NK57MonospaceBK-Regular';
+	src: url('/fonts/NK57MonospaceBk-Regular.woff2') format('woff2');
+}
+
+h1 {
+	font-family: 'NK57MonospaceBK-Regular', sans-serif;
+	font-size: 2rem;
+}
