@@ -24,7 +24,7 @@
 	</div>
 </div>
 
-<style>
+<style lang="css">
 	* {
 		margin: 0;
 		padding: 0;
