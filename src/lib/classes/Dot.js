@@ -1,6 +1,6 @@
 import P5 from 'p5-svelte';
 
-class Dot {
+export default class Dot {
 	/**
 	 * @param {P5} p - p5 instance
 	 * @param {number} x
@@ -12,12 +12,36 @@ class Dot {
 		this.x = x;
 		this.y = y;
 		this.r = r;
+		this.transparency = 0; // Start with minimum transparency
+		this.minTransparency = 0; // Minimum transparency value
+		this.maxTransparency = 255;
+		this.fadeSpeed = 30; // Speed of fade effect
+		this.activeRadius = 20; // Radius of mouse interaction
 	}
 
 	render() {
-		this.p.background(0);
+		this.p.fill(255, this.transparency);
+		this.p.noStroke();
 		this.p.ellipse(this.x, this.y, this.r);
 	}
-}
 
-export default Dot;
+	/**
+	 * @param {object} mousePos - Mouse position object with x and y properties
+	 */
+
+	update(mousePos) {
+		// Calculate squared distance (faster than regular dist())
+		const dx = mousePos.x - this.x;
+		const dy = mousePos.y - this.y;
+		const distanceSq = dx * dx + dy * dy;
+		const activeRadiusSq = this.activeRadius * this.activeRadius;
+
+		if (distanceSq < activeRadiusSq) {
+			// Mouse is nearby - become fully opaque
+			this.transparency = this.maxTransparency;
+		} else {
+			// Fade out but don't go below minimum transparency
+			this.transparency = this.p.max(this.minTransparency, this.transparency - this.fadeSpeed);
+		}
+	}
+}

@@ -31,11 +31,11 @@
 		box-sizing: border-box;
 		font-family: 'NK57MonospaceBK-Regular';
 		color: #fbfbfb;
-		background: #404040;
 	}
 
 	.wrapper {
 		padding-left: 50px;
+		background: #404040;
 	}
 
 	.header {
@@ -47,7 +47,7 @@
 		grid-template-columns: 1fr 3fr;
 		grid-template-rows: 1fr;
 		height: 100vh;
-		width: 100vw;
+		width: 100%;
 		font-size: 16px;
 		line-height: 1.5;
 	}

@@ -1,23 +1,46 @@
-<script lang="ts">
-	import Dot from '$lib/classes/Dot.js';
-	import P5 from 'p5-svelte';
-
-	let sketch = (p: P5) => {
-		let dot = new Dot(p, 0, 0, 10);
-
-		p.setup = () => {
-			p.createCanvas(400, 400);
-			p.background(200);
-		};
-
-		p.draw = () => {
-			dot.render();
-		};
-	};
+<script>
+	import DotsBackground from '$lib/components/DotsBackground.svelte';
 </script>
 
-<h2>Heard an amazing set? here you can listen back to it!</h2>
+<div class="wrapper">
+	<div class="dots-container">
+		<DotsBackground></DotsBackground>
+	</div>
+	<div class="content">
+		<div class="page-title">
+			<h1>Recordings:</h1>
+		</div>
+		<p>Recordings page</p>
+		<a href="/rec1">recording 1</a>
+	</div>
+</div>
 
-<P5 {sketch}></P5>
+<style>
+	:global(body) {
+		margin: 0;
+		padding: 0;
+		overflow-x: hidden;
+	}
+	.content {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		padding: 20px;
+		background: rgba(51, 51, 51, 0.8); /* Added transparency */
+		border-radius: 10px;
+		margin: 20px;
+		max-width: calc(100% - 40px);
+	}
+	.dots-container {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
 
-<style></style>
+	.wrapper {
+		height: 100%;
+		width: 100%;
+	}
+</style>
