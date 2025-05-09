@@ -3,9 +3,6 @@
 </script>
 
 <div class="wrapper">
-	<div class="dots-container">
-		<DotsBackground></DotsBackground>
-	</div>
 	<div class="content">
 		<div class="page-title">
 			<h1>Recordings:</h1>
@@ -32,11 +29,6 @@
 		border-radius: 10px;
 		margin: 20px;
 		max-width: calc(100% - 40px);
-	}
-	.dots-container {
-		position: absolute;
-		width: 100%;
-		height: 100%;
 	}
 
 	.wrapper {

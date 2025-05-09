@@ -1,6 +1,7 @@
 <script lang="ts">
 	import '../app.css';
 	import SideBar from '$lib/components/SideBar.svelte';
+	import DotsBackground from '$lib/components/DotsBackground.svelte';
 
 	let { children } = $props();
 </script>
@@ -19,6 +20,9 @@
 			<SideBar></SideBar>
 		</div>
 		<div class="main-content">
+			<div class="dots-container">
+				<DotsBackground></DotsBackground>
+			</div>
 			{@render children()}
 		</div>
 	</div>
@@ -50,6 +54,11 @@
 		width: 100%;
 		font-size: 16px;
 		line-height: 1.5;
+	}
+	.dots-container {
+		position: absolute;
+		width: 100%;
+		height: 100%;
 	}
 
 	.main-content {
