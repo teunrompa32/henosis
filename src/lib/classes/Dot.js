@@ -14,8 +14,8 @@ export default class Dot {
 		this.r = r;
 		this.transparency = 0; // Start with minimum transparency
 		this.minTransparency = 0; // Minimum transparency value
-		this.maxTransparency = 255;
-		this.fadeSpeed = 30; // Speed of fade effect
+		this.maxTransparency = 200;
+		this.fadeSpeed = 10; // Speed of fade effect
 		this.activeRadius = 20; // Radius of mouse interaction
 	}
 

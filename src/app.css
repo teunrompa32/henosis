@@ -15,3 +15,8 @@ h1 {
 	font-family: 'NK57MonospaceBK-Regular', sans-serif;
 	font-size: 2rem;
 }
+
+@font-face {
+	font-family: 'NK57MonospaceCdsb-italic';
+	src: url('/fonts/NK57MonospaceCdSb-Italic.woff2') format('woff2');
+}

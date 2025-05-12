@@ -1,7 +1,3 @@
-<script>
-	import DotsBackground from '$lib/components/DotsBackground.svelte';
-</script>
-
 <div class="wrapper">
 	<div class="content">
 		<div class="page-title">
